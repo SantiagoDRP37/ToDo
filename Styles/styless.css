@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'roboto', Bold; }
+
+body .contenedor {
+  width: 80%;
+  margin: auto; }
+body header {
+  background: #ffff;
+  display: flex; }
+  body header #contenedorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8%;
+    margin-bottom: 15%; }
+    body header #contenedorHeader #ImgPerfilMax {
+      height: 48px;
+      width: 48px;
+      border-radius: 55px; }
+body main {
+  background: #F3F5FA; }
+  body main #TituloTareas {
+    display: flex;
+    align-items: center; }
+    body main #TituloTareas h2 {
+      margin-right: 2%; }
+    body main #TituloTareas a {
+      text-decoration: none;
+      color: #425195; }
+  body main .Tareas #CajaTarea_titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    body main .Tareas #CajaTarea_titulo #estado {
+      color: #2DC09D; }
+    body main .Tareas #CajaTarea_titulo a {
+      background: #425195;
+      padding: 1% 2%;
+      border-radius: 10px;
+      color: #ffff; }
+
+/*# sourceMappingURL=styless.css.map */

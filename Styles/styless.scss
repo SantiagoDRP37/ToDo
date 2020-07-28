@@ -1,0 +1,65 @@
+$color-pimary:#ffff;
+$color-secundary: #F3F5FA;
+$color-third:#425195;
+$color-activo:#2DC09D;
+$color-finalizado: #DC3646;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;  
+    font-family: 'roboto', Bold;
+}
+body{
+    .contenedor{
+        width: 80%;
+        margin: auto;
+    }
+    header{
+        background:$color-pimary;
+        display: flex;
+        #contenedorHeader{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8%;
+            margin-bottom: 15%;
+
+            #ImgPerfilMax{
+                height: 48px;
+                width: 48px;
+                border-radius:55px;
+            }
+        }
+    }
+    main{
+        background: $color-secundary;
+        #TituloTareas{
+            display: flex;
+            align-items: center;
+            h2{
+                margin-right: 2%;
+            }
+            a{
+                text-decoration: none;
+                color: $color-third;
+            }
+        }
+        .Tareas{
+         #CajaTarea_titulo{
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             #estado{
+                 color:$color-activo;
+             }
+             a{
+                 background: $color-third;
+                 padding: 1% 2%;
+                 border-radius:10px;
+                 color: #ffff;
+             }
+         }   
+        }
+    }
+}
