@@ -37,6 +37,7 @@ body{
         #TituloTareas{
             display: flex;
             align-items: center;
+            padding: 12px 0;
             h2{
                 margin-right: 2%;
             }
@@ -46,20 +47,94 @@ body{
             }
         }
         .Tareas{
-         #CajaTarea_titulo{
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-             #estado{
-                 color:$color-activo;
-             }
-             a{
-                 background: $color-third;
-                 padding: 1% 2%;
-                 border-radius:10px;
-                 color: #ffff;
-             }
-         }   
+            padding: 16px;
+            background-color: $color-pimary;
+            border-radius: 10px;
+            z-index: 1;
+            #CajaTarea_titulo{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #F0F3FF;
+                #estado{
+                    color:$color-activo;
+                }
+                a{
+                    background: $color-third;
+                    padding: 1% 2%;
+                    border-radius:10px;
+                    color:$color-pimary;
+                }
+            }
+            #CajaTarea_Subtitulo{
+                display: grid;
+                grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
+                
+                padding-right: 10%;
+                margin: 2% 0%;
+                .ImagenPerfilMin{
+                    width: 24px;
+                    border-radius: 12px;
+                    
+                }
+                
+            }
+            #CajaTarea_Cuerpo{
+                padding-left: 2%;
+                border-left: 2px solid $color-activo;
+                .tituloCuerpo{
+                    display: flex;
+                    justify-content: space-between;
+                    
+                }
+                p{
+                    padding-right: 3%;
+                }
+            }
+        }
+        .opciones{
+            position: relative;
+            padding: 5px 15px;
+            width: 35%;
+            top: -45px;
+            left: 65%;
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr;
+            grid-template-rows: 0.5fr 0.5fr;
+            gap: 8px;
+            background: $color-secundary;
+            box-shadow: 0px 0px 14px 0px rgba(71,87,162,0.34);
+            border-radius: 5px;
+            @media only screen and (max-width: 661px) {
+                width: 40%;
+                left: 62%;
+            }
+            @media only screen and (min-width: 661px)and(min-width: 720px){
+                width: 20%;
+                left: 80%;
+            }
+        }
+        #Boton{
+            position: relative;
+            top: -60px;
+            left: 89%;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: $color-third;
+            @media only screen and (max-width: 576px) {
+                left:85%;
+            }
+            @media only screen and (min-width: 576px)and(min-width: 720px){
+                left:91%;
+            }
+            i{
+                position: relative;
+                top:25%;
+                left: 29%;
+                color: white;
+            }
         }
     }
 }
