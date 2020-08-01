@@ -26,35 +26,39 @@
                 <h2>Tareas</h2>
                 <a>(- asignadas)</a>
             </div>
-            <div class="Tareas">
-                <div id="CajaTarea_titulo">
-                    <p id="estado">Activa</p>
-                    <a>Agregar Tiempo</a>
-                </div>
-                <div id="CajaTarea_Subtitulo">
-                    <img class="ImagenPerfilMin" src="./Images/fotoPerfil.jpg" alt="Imagen de Perfil">
-                    <p>Pedro Navajas</p>
-                    <i class="far fa-clock"></i>
-                    <p>Tiempo Restante: <a id="tiempoFaltante">12 hrs</a></p>
-                </div>
-                <div id="CajaTarea_Cuerpo">
-                    <div class="tituloCuerpo">
-                        <h3>Titulo de la tarea</h3>
-                        <i class="fas fa-ellipsis-v"></i>
-                        
-                    </div>
-                    <p>When you enter into any new area of science, you almost always find yourself with a baffling new language.</p>
-
-                </div>
-                <div class="opciones" >
-                    <i class="fas fa-eye"></i>
-                    <P>Ver Tarea</P>
-                    <i class="fas fa-trash"></i>
-                    <p>Borrar</p>
-                </div>
+            <div  id="contenedorTareas">
+                <div class="Tareas">
+                        <div id="CajaTarea_titulo">
+                            <p id="estado">Activa</p>
+                            <a>Agregar Tiempo</a>
+                        </div>
+                        <div id="CajaTarea_Subtitulo">
+                            <img class="ImagenPerfilMin" src="./Images/fotoPerfil.jpg" alt="Imagen de Perfil">
+                            <p>Pedro Navajas</p>
+                            <i class="far fa-clock"></i>
+                            <p>Tiempo Restante: <a class="tiempoFaltante">--</a> hrs</p>
+                        </div>
+                        <div id="CajaTarea_Cuerpo">
+                            <div class="tituloCuerpo">
+                                <h3 class="titulito">Titulo de la tarea</h3>
+                                <i class="fas fa-ellipsis-v"></i>
+                                        
+                            </div>
+                            <p class="descripcion">When you enter into any new area of science, you almost always find yourself with a baffling new language.</p>
+        
+                        </div>
+                        <div class="opciones" style="display: none;">
+                            <i class="fas fa-eye"></i>
+                            <P>Ver Tarea</P>
+                            <i class="fas fa-trash"></i>
+                            <p>Borrar</p>
+                        </div>
+                </div>        
             </div>
             <div id="Boton"><i class="fas fa-plus fa-2x"></i></div>
         </div>
+        <script src="./Scripts/script.js">
+        </script>
     </main>
 </body>
 </html>
