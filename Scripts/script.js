@@ -11,36 +11,33 @@ botonNuevaTarea.addEventListener('click',()=>{
     let titulonuevo = prompt('Ingrese el titulo de nueva tarea');
     let descripcion = prompt('Ingrese descripcion de la tarea');
     let hora = prompt('Ingresar el tiempo en horas');
-    if (titulonuevo==null && descripcion==null && hora==null) {
-        
-        
+    if (titulonuevo==null && descripcion==null && hora==null) {   
     }else{
         añadirTarea(titulonuevo,descripcion,hora);
         crearNuevaTarea(titulonuevo,descripcion,hora);
-    }
-    
+        agregarEventoOpciones();
+        cargarTareasCargadas();
+    } 
 });
 //evento de visualizar detalle
-
 function random(number) {
     return Math.floor(Math.random() * (number+1));
-  }
+}
 function bgChange() {
     var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
     document.body.style.backgroundColor = rndCol;
-  }
-let opciones = document.getElementsByClassName('fas fa-ellipsis-v')
-for (let i = 0; i < opciones.length; i++) {
-    opciones[i].onclick = function(e){
-        e.target.style.backgroundColor =  bgChange();
-        console.log("hola"+i);
-    }
-    
+}
+function agregarEventoOpciones(){
+    let opciones = document.getElementsByClassName('fas fa-ellipsis-v')
+    for (let i = 0; i < opciones.length; i++) {
+        opciones[i].onclick = function(e){
+            e.target.style.backgroundColor =  bgChange();
+            console.log("hola"+i);
+        }    
+    }   
 }
 //************************************** Funciones *************************************************************//
-function crearNuevaTarea(titulo, descrip,hora){
-    console.log("hola");
-    
+function crearNuevaTarea(titulo, descrip,hora){   
     let contenedor =  document.getElementById('contenedorTareas');
     let tarea = document.getElementsByClassName('Tareas')[0];
     
@@ -67,7 +64,14 @@ function añadirTarea(titulo, descrip,hora){
 function guardarTareaStorage(listaTarea){
     localStorage.setItem('localTareaList',JSON.stringify(listaTarea));
 }
+function cargarTareasCargadas(){
+    let tareaGuardada = JSON.parse(localStorage.getItem('localTareaList'));
+    console.log(tareaGuardada);
+}
 function borrarTarea(){
- 
+    
+}
+window.onload = () => {
+    cargarTareasCargadas();
     
 }
